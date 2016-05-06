@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/dictionary"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/image_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/app_name"
+            android:id="@+id/textView"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textStyle="italic"
+            android:layout_below="@+id/image_icon"
+            android:textColor="@color/textColorPrimary"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="15dp" />
+
+
+</RelativeLayout>

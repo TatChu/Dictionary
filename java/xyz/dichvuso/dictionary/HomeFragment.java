@@ -111,30 +111,30 @@ public class HomeFragment extends Fragment {
                 listWord.setAdapter(adapter);
                 */
                 if (!txt_input.getText().toString().equals(empty)) {
-                    list.add(new Word("color", "mau sac", "en"));
-                    list.add(new Word("boss", "ong chu", "en"));
-                    list.add(new Word("action", "hanh dong", "en"));
-                    list.add(new Word("big boss", "mau sac", "en"));
-                    list.add(new Word("the boss", "ong chu", "en"));
-                    list.add(new Word("website", "hanh dong", "en"));
-                    list.add(new Word("theme", "mau sac", "en"));
-                    list.add(new Word("computer", "ong chu", "en"));
-                    list.add(new Word("kyeboard", "hanh dong", "en"));
-                    list.add(new Word("bag", "mau sac", "en"));
-                    list.add(new Word("plus", "ong chu", "en"));
-                    list.add(new Word("line", "hanh dong", "en"));
-                    list.add(new Word("mouse", "mau sac", "en"));
-                    list.add(new Word("adapter", "ong chu", "en"));
-                    list.add(new Word("window", "hanh dong", "en"));
-                    list.add(new Word("key", "mau sac", "en"));
-                    list.add(new Word("air", "ong chu", "en"));
-                    list.add(new Word("monitor", "hanh dong", "en"));
-                    list.add(new Word("table", "mau sac", "en"));
-                    list.add(new Word("chair", "ong chu", "en"));
-                    list.add(new Word("shoe", "hanh dong", "en"));
-                    list.add(new Word("cable", "mau sac", "en"));
-                    list.add(new Word("contract", "ong chu", "en"));
-                    list.add(new Word("circle", "hanh dong", "en"));
+                    list.add(new Word(1, "color", "mau sac", "en"));
+                    list.add(new Word(2, "boss", "ong chu", "en"));
+                    list.add(new Word(3, "action", "hanh dong", "en"));
+                    list.add(new Word(4, "big boss", "mau sac", "en"));
+                    list.add(new Word(5, "the boss", "ong chu", "en"));
+                    list.add(new Word(6, "website", "hanh dong", "en"));
+                    list.add(new Word(7, "theme", "mau sac", "en"));
+                    list.add(new Word(8, "computer", "ong chu", "en"));
+                    list.add(new Word(9, "kyeboard", "hanh dong", "en"));
+                    list.add(new Word(10, "bag", "mau sac", "en"));
+                    list.add(new Word(11, "plus", "ong chu", "en"));
+                    list.add(new Word(12, "line", "hanh dong", "en"));
+                    list.add(new Word(13, "mouse", "mau sac", "en"));
+                    list.add(new Word(14, "adapter", "ong chu", "en"));
+                    list.add(new Word(15, "window", "hanh dong", "en"));
+                    list.add(new Word(16, "key", "mau sac", "en"));
+                    list.add(new Word(17, "air", "ong chu", "en"));
+                    list.add(new Word(18, "monitor", "hanh dong", "en"));
+                    list.add(new Word(19, "table", "mau sac", "en"));
+                    list.add(new Word(20, "chair", "ong chu", "en"));
+                    list.add(new Word(21, "shoe", "hanh dong", "en"));
+                    list.add(new Word(22, "cable", "mau sac", "en"));
+                    list.add(new Word(23, "contract", "ong chu", "en"));
+                    list.add(new Word(24, "circle", "hanh dong", "en"));
 
                     adapter = new Adapter_new(getActivity(), R.layout.listview_word, list);
                     listWord.setAdapter(adapter);
@@ -164,27 +164,7 @@ public class HomeFragment extends Fragment {
         listWord.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, final long id) {
-                btn_focus.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(getActivity(), "You touched right button on list with id = " + String.valueOf(id) , Toast.LENGTH_SHORT).show();
-                    }
-                });/*
-                Fragment fragment = null;
-                String title = getString(R.string.app_name);
-                fragment = new ResultFrament();
-                title = getString(R.string.title_test);
-
-                Toast.makeText(getActivity(), "You touched on " + String.valueOf(position) + " on list!", Toast.LENGTH_SHORT).show();
-                try {
-                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.container_body, fragment);
-                    fragmentTransaction.commit();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                */
+                Toast.makeText(getContext(), "Item clicked", Toast.LENGTH_SHORT).show();
             }
 
         });

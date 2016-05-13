@@ -45,9 +45,9 @@ public class Word {
 
 
     public Word(){}
-    public Word(String word, String content, String lang)
+    public Word(int id, String word, String content, String lang)
     {
-        this.word = word; this.content = content; this.lang = lang;
+        this.id = id; this.word = word; this.content = content; this.lang = lang;
     }
 
 }

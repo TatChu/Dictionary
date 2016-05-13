@@ -28,7 +28,7 @@ public class SQLiteDatabase {
         Cursor c = db.rawQuery(sql,null);
         c.moveToFirst();
         while (!c.isAfterLast()) {
-            list.add(new Word(c.getString(1), c.getString(1), c.getString(2)));
+            list.add(new Word(c.getInt(0), c.getString(1), c.getString(1), c.getString(2)));
             c.moveToNext();
         }
         return list;

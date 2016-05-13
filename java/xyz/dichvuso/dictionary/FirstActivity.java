@@ -60,8 +60,14 @@ public class FirstActivity extends Activity {
             public void onAnimationEnd(Animation animation) {
 
                 Intent intent = new Intent(FirstActivity.this, MainActivity.class);
-                startActivity(intent);
                 FirstActivity.this.finish();
+                startActivity(intent);
+
+                /*
+                Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(startIntent);
+                */
             }
         });
         this.mFadeOut.setAnimationListener(new Animation.AnimationListener() {
